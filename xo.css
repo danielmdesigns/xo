@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#reset {
+  padding: 10px 15px;
+  cusor: pointer;
+  margin-top: 25px;
+}
+
+.o {
+  color: magenta;
+  background-color: magenta;
+}
+
+.x {
+  color: cyan;
+  background-color: cyan;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+
+#wrapper{
+  max-width: 450px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.square {
+    float:left;
+    position: relative;
+    width: 30%;
+    padding-bottom : 30%;
+    margin:1.66%;
+    background-color:#1E1E1E;
+    overflow: hidden;
+    line-height: 50%;
+	border-radius: 6px;
+}
+
+.content {
+    position:absolute;
+    height:100%;
+    width:100%;
+}
+
+
