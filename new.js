@@ -44,7 +44,7 @@ $(document).ready(function(){
 			$(".content").removeClass("disable");
 			$(".content").removeClass("o");
 			$(".content").removeClass("x");
-		} else if(turns === 9){
+		} else if(turns === 8){
 			alert("Tie Game");
 			$(".content").text("+");
 			$(".content").removeClass("disable");
@@ -55,9 +55,13 @@ $(document).ready(function(){
 			alert("This spot is already filled");
 		} else if(turns%2 === 0){
 			turns++;
+			alert("adding a O");
 			$(this).text(o);
 			$(this).addClass("disable o");
 			$(".square").addClass("disable o");
+			//animation for differnt users
+			$(this).animate({"border-radius":"100px"}, "slow");
+			$(this).closest(".square").css("background","white");
 			if(spot1.hasClass("o") && spot2.hasClass("o") && spot3.hasClass("o") ||
 				spot4.hasClass("o") && spot5.hasClass("o") && spot6.hasClass("o") ||
 				spot7.hasClass("o") && spot8.hasClass("o") && spot9.hasClass("o") ||
@@ -91,10 +95,12 @@ $(document).ready(function(){
 	});
 		// Reset Handler
 		$("#reset").click(function(){
-		$(".content").text("+");
+		$(".content").text("");
 		$(".content").removeClass("disable");
 		$(".content").removeClass("o");
 		$(".content").removeClass("x");
+		$(".content").css("border-radius","0");
+		$(".square").css("background","black");
 		turns = 0;
 	});
 });

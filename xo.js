@@ -55,6 +55,7 @@ $(".content").on("click", function() {
   } else if (turns%2 === 0) {
     turns++;
     $(this).text(o);
+	alert("i just added an O");
     $(this).addClass("disable o");
     if (spot1.hasClass("o") && spot2.hasClass("o") && spot3.hasClass("o") ||
       spot4.hasClass("o") && spot5.hasClass("o") && spot6.hasClass("o") ||
@@ -70,6 +71,9 @@ $(".content").on("click", function() {
     } else {
       turns++;
 			$(this).text(x);
+			$(this).animate({"border-radius":"100px"}, "slow", function(){
+				alert("animation & call back worked =");
+			});
 			$(this).addClass('disable x');
 			if(spot1.hasClass('x') && spot2.hasClass('x') && spot3.hasClass('x') ||
 				spot4.hasClass('x') && spot5.hasClass('x') && spot6.hasClass('x') ||
